@@ -1,6 +1,6 @@
 # MyDockerApp
 
-Basic Auth0 application used to login with your 3rt party provider like Google for example.
+Basic Auth0 application used to login with your 3rd party provider like Google for example.
 
 App is using auth0 'domain' and 'clientID' to login to auth0 Application.
 
