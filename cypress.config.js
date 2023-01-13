@@ -1,6 +1,6 @@
 const { defineConfig } = require("cypress");
 
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = defineConfig({
   env: {
@@ -10,7 +10,15 @@ module.exports = defineConfig({
     auth0_audience: process.env.REACT_APP_AUTH0_AUDIENCE,
     auth0_scope: process.env.REACT_APP_AUTH0_SCOPE,
     auth0_client_id: process.env.REACT_APP_AUTH0_CLIENTID,
-  }
+  },
+
+  component: {
+    experimentalOriginDependencies: true,
+    devServer: {
+      framework: "create-react-app",
+      bundler: "webpack",
+    },
+  },
 });
 
 module.exports = defineConfig({
@@ -20,3 +28,4 @@ module.exports = defineConfig({
     },
   },
 });
+
